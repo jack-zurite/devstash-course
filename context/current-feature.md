@@ -4,7 +4,7 @@ Dashboard Collections — Live Data
 
 ## Status
 
-In Progress
+Completed
 
 ## Goals
 
@@ -29,4 +29,4 @@ In Progress
 - Prisma + Neon PostgreSQL Setup — Prisma 7 with @prisma/adapter-neon; full schema (User, Item, ItemType, Collection, ItemCollection, Tag, ItemTag + NextAuth models); initial migration applied to dev branch; build passing
 - Seed Sample Data — idempotent seed script (demo@devstash.io, 7 system types, 5 collections, 18 items, 8 tags); uses DIRECT_URL; run with `npx prisma db seed`
 - Database Test Script — `scripts/test-db.ts` verifies connection and prints model counts, item types, collections, and demo user details
-- Dashboard Collections — Live Data — replace mock collection cards with real Prisma data; border color from dominant content type; type icons per collection
+- Dashboard Collections — Live Data — replaced mock collection cards with real Prisma data; border color derived from dominant content type; type icons shown per collection; build and lint passing

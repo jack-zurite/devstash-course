@@ -1,20 +1,15 @@
-# Current Feature
-
-Stats & Sidebar — Live Data
+# Current Feature: Add Pro Badge to Sidebar
 
 ## Status
 
-Completed
+In Progress
 
 ## Goals
 
-- Display main-area stats from real database data instead of `src/lib/mock-data.ts`
-- Display system item types in the sidebar with their icons, linking to `/items/[typename]`
-- Show real collection data (favorites/recents) in the sidebar instead of mock data
-- Add a "View all collections" link under the sidebar collections list, going to `/collections`
-- Keep star icons for favorite collections; for recent collections, show a colored circle based on the most-used item type in that collection
-- Add data fetching functions to `src/lib/db/items.ts` (reference `src/lib/db/collections.ts` for pattern)
-- Keep the existing design/layout — no visual changes
+- Add a "PRO" badge next to the File and Image item type entries in the sidebar
+- Use the shadcn/ui Badge component
+- Badge should be clean and subtle (not loud/attention-grabbing)
+- Badge text must be all uppercase ("PRO")
 
 ## History
 

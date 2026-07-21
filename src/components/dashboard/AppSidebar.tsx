@@ -6,6 +6,7 @@ import { getItemTypesWithCounts } from "@/lib/db/items";
 import { currentUser } from "@/lib/mock-data";
 import { typeIcons } from "@/lib/type-icons";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 import {
   Sidebar,
   SidebarContent,
@@ -20,6 +21,7 @@ import {
 } from "@/components/ui/sidebar";
 
 const RECENT_COLLECTIONS_LIMIT = 5;
+const PRO_TYPE_SLUGS = new Set(["files", "images"]);
 
 export async function AppSidebar() {
   const [itemTypes, favoriteCollections, recentCollections] = await Promise.all([
@@ -45,6 +47,14 @@ export async function AppSidebar() {
                     >
                       <Icon style={{ color: type.color }} />
                       <span>{type.name}</span>
+                      {PRO_TYPE_SLUGS.has(type.slug) && (
+                        <Badge
+                          variant="outline"
+                          className="h-4 px-1.5 text-[9px] font-semibold tracking-wide text-muted-foreground"
+                        >
+                          PRO
+                        </Badge>
+                      )}
                     </SidebarMenuButton>
                     <SidebarMenuBadge>{type.itemCount}</SidebarMenuBadge>
                   </SidebarMenuItem>

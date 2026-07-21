@@ -1,15 +1,10 @@
-# Current Feature: Add Pro Badge to Sidebar
+# Current Feature
 
 ## Status
 
-In Progress
+Not Started
 
 ## Goals
-
-- Add a "PRO" badge next to the File and Image item type entries in the sidebar
-- Use the shadcn/ui Badge component
-- Badge should be clean and subtle (not loud/attention-grabbing)
-- Badge text must be all uppercase ("PRO")
 
 ## History
 
@@ -26,3 +21,4 @@ In Progress
 - Dashboard Collections — Live Data — replaced mock collection cards with real Prisma data; border color derived from dominant content type; type icons shown per collection; build and lint passing
 - Dashboard Items — Live Data — replaced mock pinned/recent item data with real Prisma data (`src/lib/db/items.ts`); item card icon/border derived from item type, tags pulled from `ItemTag`/`Tag`; pinned section hidden when empty; stats cards now use real item/collection counts (`getItemStats`, `getCollectionStats`); build and lint passing; merged to main
 - Stats & Sidebar — Live Data — sidebar item types now come from `getItemTypesWithCounts` (`src/lib/db/items.ts`) linking to `/items/[typename]`; favorite/recent collections in sidebar use `getFavoriteCollections`/`getRecentNonFavoriteCollections` (`src/lib/db/collections.ts`); favorites show a star icon, recents show a dot colored by dominant item type; added "View all collections" link to `/collections`; build and lint passing
+- Add Pro Badge to Sidebar — added a subtle shadcn/ui `Badge` (outline variant) next to the File and Image entries in the sidebar Types list, matched by slug (`files`/`images`); build and lint passing; merged to main
